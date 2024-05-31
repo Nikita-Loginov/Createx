@@ -1,0 +1,59 @@
+@import "base/_vars.scss";
+
+.header{
+    padding-top: 20px;
+    background: linear-gradient(45.00deg, rgb(255, 63, 58,0.2) 0%,rgb(247, 94, 5,0.2) 100%);
+    position: relative;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:35px;
+    }
+    &__logo{
+        margin-right: 27px;
+    }
+    &__link{
+        @extend %btn-accent;
+        margin-left: auto;
+    }
+    &__account-item{
+        padding-left: 27px;
+        position: relative;
+        &:before{
+            content:"";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 17px;
+            height: 17px;
+            background-image: url(../img/icon/person.svg);
+        }
+        position: relative;
+        &:after{
+            position: absolute;
+            content:"";
+            left: 0;
+            bottom: 0;
+            background-color: $accent-color;
+            height: 1px;
+            width: 100%;
+            scale: 0;
+            transform-origin: right;
+            transition: scale .5s;
+        }
+        &:hover{
+            &:after{
+                scale: 1;
+                transform-origin: left;
+            }
+        }
+    }
+    &__account-link{
+        font-size: 16px;
+        line-height: 1.6;
+        color:$main-color;
+        @extend %lato-700;
+    }
+}

@@ -1,0 +1,147 @@
+
+
+//COLORS
+$bg-color:#fff;
+$main-color:#424551;
+$accent-color:#FF3F3A;
+$text-color:#1E212C;
+$title-color:#1E212C;
+$input-color:#fff;
+$textarea-color:#fff;
+$gray:rgb(215, 218, 221);
+$button-color:linear-gradient(45.00deg, rgb(255, 63, 58) 0%,rgb(247, 94, 5) 100%);
+//PADDING
+$padding-container:0px 15px;
+@mixin padding($pt,$pr,$pb,$pl){
+    padding:$pt $pr $pb $pl;
+}
+
+//MIN-HEIGHT
+$minHeight-btnBig:52px;
+$minHeight-btnSmall:44px;
+$minHeight-textarea:128px;
+$minHeight-input:52px;
+//BORDER
+@mixin border($borderWidth,$borderColor,$borderStyle){
+    border:$borderWidth $borderColor $borderStyle;
+}
+//BORDERRADIUS
+$borderRadiusBtn:4px;
+$borderRadiusInput:4px;
+$borderRadiusTextarea:4px;
+$borderRadiusCard:4;
+@mixin borderRadius($borderRadiusWidth){
+    border-radius:$borderRadiusWidth;
+}
+
+
+%lato-400{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+%lato-700{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+
+%lato-900{
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+}
+
+
+%title{
+    font-size: 46px;
+    color:$title-color;
+    @extend %lato-900;
+    line-height: 130%;
+    text-transform:capitalize;
+}
+
+%text{
+    font-size: 20px;
+    color:$text-color;
+    @extend %lato-700;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+%flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%btn-accent{
+    @extend %flexCenter;
+    min-height: $minHeight-btnBig;
+    @include padding(0,32px,0,32px);
+    @include borderRadius($borderRadiusBtn);
+    transition: all .5s;
+    color: rgb(255, 255, 255);
+    background: $button-color;
+    @extend %lato-700;
+    font-size: 14px;
+    line-height: 44px;
+    &:hover{
+        color:#424551;
+        @include borderRadius(10px);
+    }
+}
+
+%btn-nocolor{
+    @extend %flexCenter;
+    min-height: $minHeight-btnSmall;
+    @include border(1px,$accent-color,solid);
+    @include padding(0,32px,0,32px);
+    @include borderRadius($borderRadiusBtn);
+    @extend %lato-700;
+    font-size: 14px;
+    line-height: 44px;
+    color: $accent-color;
+    transition: all .8s;
+    &:hover{
+        background-color:$accent-color;
+        color:#fff;
+        @include borderRadius(10px);
+    }
+}
+
+.button{
+    @extend %btn-nocolor;
+}
+
+%input{
+    @extend %flexCenter;
+    @include padding(0,15px,0,15px);
+    @include border(1px,$gray,solid);
+    @include borderRadius($borderRadiusInput);
+    min-height: $minHeight-input;
+    background-color: $input-color;
+    &::placeholder{
+        font-size: 16px;
+        line-height: 1.6;
+        background-color: $bg-color;
+        color:$main-color;
+        @extend %lato-400;
+    }
+}
+
+%textarea{
+    @extend %flexCenter;
+    @include padding(16px,20px,16px,20px);
+    @include border(1px,$gray,solid);
+    @include borderRadius($borderRadiusTextarea);
+    min-height: $minHeight-textarea;
+    background-color: $textarea-color;
+    resize: none;
+    &::placeholder{
+        font-size: 16px;
+        line-height: 1.6;
+        background-color: $bg-color;
+        color:$main-color;
+        @extend %lato-400;
+    }
+}
+

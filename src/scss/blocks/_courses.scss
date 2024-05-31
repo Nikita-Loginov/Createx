@@ -1,0 +1,76 @@
+@import "base/_vars.scss";
+
+.courses{
+    padding-bottom: 180px;
+    &__box{
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: flex-end;
+        gap:20px;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:30px;
+    }
+    &__item{
+        border: 1px solid rgb(229, 232, 237);
+        border-radius: $borderRadiusCard;
+        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),0px 12px 10px -6px rgba(154, 156, 165, 0.04),0px 30px 24px -10px rgba(154, 156, 165, 0.05),0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+        background: rgb(255, 255, 255);
+        display: flex;
+        transition: all .3s;
+        align-items: center;
+        gap:32px;
+        &:hover{
+            box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),0px 12px 10px -6px rgba(154, 156, 165, 0.08),0px 30px 24px -10px rgba(154, 156, 165, 0.1),0px 80px 80px -20px rgba(154, 156, 165, 0.16);    
+        }  
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        align-items: flex-start;
+    }
+    &__post{
+        @extend %flexCenter;
+        min-height: 23px;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        padding: 0 8px;
+        border-radius: $borderRadiusCard;
+        &--green{
+            background-color:rgb(3, 206, 164);;
+        }
+        &--blue{
+            background-color: rgb(90, 135, 252);;
+        }
+        &--orange{
+            background: rgb(248, 152, 40);
+        }
+        &--pink{
+            background: rgb(245, 47, 110);
+        }
+    }
+    &__description{
+        a{
+            @extend %text;
+        }
+    }
+    &__about{
+        display: flex;
+        font-size: 18px;
+        line-height: 150%;
+    }
+    &__summ{
+        color:$accent-color;
+        @extend %lato-700;
+        margin-right: 8px;
+    }
+    &__name{
+        padding-left: 8px;
+        position: relative;
+        color: rgb(120, 122, 128);
+        border-left: 1px solid rgb(120, 122, 128);
+    }
+}

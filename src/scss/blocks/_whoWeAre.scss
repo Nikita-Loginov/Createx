@@ -1,0 +1,44 @@
+@import "base/_vars.scss";
+
+.whoWeAre{
+    padding: 180px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+    }
+    &__body{
+        flex-basis: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__box{
+        margin-bottom: 40px;
+    }
+    &__list{
+        margin-bottom: 100px;
+    }
+    &__item{
+        padding-left: 32px;
+        position: relative;
+        color:$text-color;
+        display: flex;
+
+        &:not(:last-of-type){
+            margin-bottom: 12px;
+        }
+        &:before{
+            position: absolute;
+            content:"";
+            left: 0;
+            top: 6px;
+            width: 15px;
+            height: 15px;
+            background-image: url(../img/icon/check.svg);
+        }
+    }
+    &__link{
+        @extend %btn-accent;
+    }
+}

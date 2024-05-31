@@ -1,0 +1,181 @@
+@import "base/_vars.scss";
+
+.footer{
+    padding-top: 80px;
+    background-color: #1E212C;
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap:60px;
+    }
+    &__top{
+        
+        display: flex;
+        justify-content: space-between;
+        gap:15px;
+        padding-bottom: 60px;
+    }
+    &__content{
+        flex-basis: 280px;
+    }
+    &__content-logo{
+        display: inline-block;
+        margin-bottom: 24px;
+    }
+    &__content-text{
+        color: #fff;;
+        font-size: 12px;
+        @extend %lato-400;
+        line-height: 150%;
+        letter-spacing: 0%; 
+        opacity: 0.6; 
+        margin-bottom: 38px;
+    }
+    &__menu{
+        flex:0 1 165px;
+    }
+    &__title{
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 1.6;
+        color:#fff;
+        @extend %lato-700;
+    }
+    &__item{
+        position: relative;
+        &:before{
+            position: absolute;
+            content:"";
+            left: 0;
+            bottom: 0;
+            background-color: $accent-color;
+            height: 1px;
+            width: 100%;
+            scale: 0;
+            transform-origin: right;
+            transition: scale .5s;
+        }
+        &:hover{
+            &:before{
+                scale: 1;
+                transform-origin: left;
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom: 8px;
+        } 
+    }
+    &__link{
+        font-size: 16px;
+        line-height: 1.6;
+        color:rgba(255,255,255,0.6);
+        @extend %lato-400;
+    }
+    &__form{
+        flex-basis: 286px;
+    }
+    &__form-title{
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 1.6;
+        color:#fff;
+        @extend %lato-700;
+    }
+    &__formbox{
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 13px;
+        a{
+            display: flex;
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            
+        }
+    }
+    &__form-input{
+        @extend %flexCenter;
+        min-height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: $borderRadiusInput;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.12);
+        color: rgb(255, 255, 255,0.6);
+        @include padding(0,30px,0,12px);
+        &::placeholder{
+            color: rgb(255, 255, 255,0.6);
+            @extend %lato-400;
+            font-size: 12px;
+            line-height: 150%; 
+        }
+    }
+    &__form-text{
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+    }
+    &__copy{
+        background: rgb(255, 255, 255,0.05);
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__copy-link{
+        color: rgb(255, 255, 255);
+        @extend %lato-400;
+        font-size: 14px;
+        line-height: 150%; 
+    }
+    &__copy-link--decor{
+        padding-left: 20px;
+        position: relative;
+        &:before{
+            content:"";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 15px;
+            height: 14px;
+            transform: translateY(-50%);
+            background-image: url(../img/icon/heart.svg);
+        }
+    }
+    &__copy-inner{
+        width: 1260px;
+        margin: 0 auto;
+        padding: $padding-container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link--tel,
+    &__link--mail{
+        position: relative;
+        padding-left: 24px;
+        display: flex;
+        align-items: center;
+        &:before{
+            position: absolute;
+            content:"";
+            left: 0;
+        }
+    }
+    &__link--tel{
+        &:before{
+            background-image: url(../img/icon/tel.svg);
+            background-repeat: no-repeat;
+            width: 11px;
+            height: 14px;
+        }
+    }
+    &__link--mail{
+        &:before{
+            background-image: url(../img/icon/mail.svg);
+            background-repeat: no-repeat;
+            width: 14px;
+            height: 11px;
+        }
+    }
+}

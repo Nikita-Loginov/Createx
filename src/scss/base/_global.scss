@@ -1,0 +1,55 @@
+@import "base/_vars.scss";
+
+html{
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: $bg-color;
+    color:$main-color;
+    height: 100%;
+    @extend %lato-400;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main{
+    flex:1;
+}
+
+.container{
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: $padding-container;
+}
+
+.gotop{
+    color: rgb(255, 255, 255,0.6);
+        @extend %lato-700;
+        font-size: 14px;
+        line-height: 150%; 
+}
+
+.gobottom{
+    position: absolute;
+    top: 0;
+    right: 100px;
+    z-index: 8;
+    animation: gobottomScale 2s linear infinite;
+}
+
+@keyframes gobottomScale{
+    0%{
+        top:0;
+    }
+    100%{
+        top: 40px;
+    }
+}

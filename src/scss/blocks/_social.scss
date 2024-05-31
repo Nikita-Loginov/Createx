@@ -1,0 +1,20 @@
+.social{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    &__link{
+        svg{
+            
+            g{
+                transition: all .3s;
+            }
+        }
+        &:hover{
+            svg{
+                g{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

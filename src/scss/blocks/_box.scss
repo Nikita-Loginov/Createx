@@ -1,0 +1,19 @@
+@import "base/_vars.scss";
+
+.box{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    margin-bottom: 60px;
+    &__text{
+        color: $text-color;
+        @extend %lato-700;
+        text-transform: uppercase;
+    }
+    &__title{
+        @extend %title;
+    }
+    &__link{
+        @extend %btn-nocolor;
+    }
+}
