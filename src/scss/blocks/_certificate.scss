@@ -1,0 +1,36 @@
+@import "base/_vars.scss";
+.certificate{
+    padding: 120px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:15px;
+    }
+    &__content{
+        flex-basis: 400px;
+        margin-bottom: 32px;
+    }
+    &__text{
+        color: $text-color;
+        @extend %lato-700;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    &__title{
+        @extend %title;
+        margin-bottom: 48px;
+    }
+    &__patners{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:20px;
+    }
+    &__img{
+        border: 1px solid rgb(229, 232, 237);
+        border-radius: $borderRadiusCard;
+        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),0px 12px 10px -6px rgba(154, 156, 165, 0.08),0px 30px 24px -10px rgba(154, 156, 165, 0.1),0px 80px 80px -20px rgba(154, 156, 165, 0.16);
+        img{
+            border-radius: $borderRadiusCard;
+        }    
+    }
+}

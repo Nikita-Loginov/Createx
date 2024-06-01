@@ -29,7 +29,7 @@ $minHeight-input:52px;
 $borderRadiusBtn:4px;
 $borderRadiusInput:4px;
 $borderRadiusTextarea:4px;
-$borderRadiusCard:4;
+$borderRadiusCard:4px;
 @mixin borderRadius($borderRadiusWidth){
     border-radius:$borderRadiusWidth;
 }

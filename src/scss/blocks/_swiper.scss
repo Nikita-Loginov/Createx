@@ -1,0 +1,47 @@
+.button-prev,
+.button-next,
+.testimonials-button-next,
+.testimonials-button-prev{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: all .3s;
+    svg{
+        transition: all .3s;
+    }
+    &:hover{
+        background-color: $accent-color;
+        svg{
+            path{
+                fill:#fff;
+            }
+        }
+    }
+}
+.slide{
+    &:hover{
+        .teamCarousel__img-hover{
+            opacity: 1;
+        }
+    } 
+}
+.button-prev,
+.testimonials-button-prev{
+    transform: rotate(-180deg);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 30px;
+    height: 4px;
+    border-radius: 4px;
+}
+
+.swiper-pagination-bullet-active{
+    background:rgb(66, 69, 81);
+    opacity: 1;
+}
+
+.pagination{
+    text-align: center;
+}
+

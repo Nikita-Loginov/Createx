@@ -1,0 +1,96 @@
+@import "base/_vars.scss";
+.blog{
+    padding: 120px 0 180px;
+    &__inner{
+        .blog__box{
+            flex-direction: row;
+            justify-content:space-between;
+            gap:20px;
+            align-items: flex-end;
+        }
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:30px;
+    }
+    &__imgbox{
+        position: relative;
+        border-radius: $borderRadiusCard;
+        margin-bottom: 16px;
+    }
+    &__badge{
+        @extend %flexCenter;
+        background: rgb(255, 255, 255);
+        border-radius: $borderRadiusCard;
+        padding: 0 8px 0 30px;
+        font-size: 14px;
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        display: flex;
+        align-items: center;
+        &:before{
+            content:"";
+            position: absolute;
+            width: 12px;
+            height: 15px;
+            left: 8px;
+            background: url(../img/icon/mic.svg);
+        }
+    }
+    &__meta{
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+    &__name{
+        margin-right: 12px;
+    }
+    &__date,
+    &__time{
+        padding-left: 12px;
+        position: relative;
+        margin-right: 12px;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 1px;
+            height: 12px;
+            background-color: #787A80;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__title{
+        a{
+            @extend %text;
+            margin-bottom: 8px;
+        }
+        
+    }
+    &__text{
+        margin-bottom: 16px;
+    }
+    &__link{
+        color: $title-color;
+        @extend %lato-700;
+        padding-right: 32px;
+        position: relative;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 18px;
+            height: 11px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url(../../img/icon/listen.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    .box__link{
+        @extend %btn-accent;
+    }
+}

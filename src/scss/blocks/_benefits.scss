@@ -1,0 +1,77 @@
+@import "base/_vars.scss";
+
+.benefits{
+    padding-bottom: 120px;
+    &__box{
+        text-align: center;
+    }
+    &__tabs{
+        display: flex;
+        flex-direction: column;
+        gap:60px;
+    }
+    &__linkbox{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    &__link{
+        @extend %flexCenter;
+        @include padding(0,32px,0,32px);
+        @include borderRadius($borderRadiusBtn);
+        @extend %lato-700;
+        font-size: 16px;
+        line-height: 1.6;
+        color:#9A9CA5;
+        min-height: 46px;
+        gap:8px;
+        cursor: pointer;
+        transition: all 0.8s;
+        span{
+            margin-top: 2px;
+            transition: all 0.8s;
+        }
+        &.active{
+            @include border(1px,$accent-color,solid);
+            color: $accent-color;
+            transition: all 0.8s;
+            span{
+                svg{
+                    path{
+                        transition: all 0.8s;
+                        fill:$accent-color;
+                    }  
+                }
+            }
+        }
+    }
+    &__item{
+        display: none;
+        justify-content: space-between;
+        gap:20px;
+        align-items: center;
+        &.active{
+            display: flex;
+            animation: tabsItemActive 0.7s linear;
+        }
+    }
+    &__textbox{
+        display: flex;
+        flex-direction: column;
+        gap:24px;
+        max-width: 500px;
+    }
+    &__title{
+        @extend %title;
+    }
+}
+
+@keyframes tabsItemActive{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
