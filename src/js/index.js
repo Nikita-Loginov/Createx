@@ -17,6 +17,15 @@ tabsLink.forEach(function(item){
     })
 })
 
+const load = document.querySelector('.team__load')
+const loadItem = document.querySelector('.team__items')
+
+if(load){
+    load.addEventListener('click',function(item){
+        loadItem.classList.toggle('active')
+    })
+}
+
 
 const swiper = new Swiper('.teamCarousel__swiper', {
     loop: true,
@@ -40,3 +49,4 @@ const swiperTestimonials = new Swiper('.testimonials__swiper', {
         clickable: true,
     },
 });
+

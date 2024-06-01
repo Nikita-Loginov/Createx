@@ -1,0 +1,146 @@
+@import "base/_vars.scss";
+
+.team{
+    padding: 80px 0 120px;
+    &__box{
+        text-align: center;
+    }
+    &__top{
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+    }
+    &__linkbox{
+        display: flex;
+        gap:40px;
+        align-items: center;
+    }
+    &__link{
+        color:#9A9CA5;
+        font-size: 16px;
+        line-height: 1.6;
+        @extend %lato-700;
+        transition: all .3s;
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $borderRadiusCard;
+        cursor: pointer;
+        &.active{
+            color:$accent-color;
+            padding: 0 20px;
+            border: 1px solid $accent-color;
+        }
+    }
+    &__form{
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-basis: 315px;
+        .team__form-input{
+            padding-right: 35px;
+            width: 100%;
+        }
+    }
+    &__form-input{
+        @extend %input;
+    }
+    &__form-search{
+        position: absolute;
+        right: 15px;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:30px;
+        margin-bottom: 80px;
+        &.active{
+            .team__item{
+                display: block;
+            }
+        }
+    }
+    &__item{
+        border: 1px solid rgb(229, 232, 237);
+        border-radius: $borderRadiusCard;
+        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),0px 12px 10px -6px rgba(154, 156, 165, 0.04),0px 30px 24px -10px rgba(154, 156, 165, 0.05),0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+        background: rgb(255, 255, 255); 
+        transition: all .3s;
+        display: none;
+        &:hover{
+            box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),0px 12px 10px -6px rgba(154, 156, 165, 0.08),0px 30px 24px -10px rgba(154, 156, 165, 0.1),0px 80px 80px -20px rgba(154, 156, 165, 0.16);    
+        } 
+        &:nth-of-type(-n+9) {
+            display: block;
+        }
+    }
+    &__content{
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        align-items: flex-start
+    }
+    &__badge{
+        @extend %flexCenter;
+        min-height: 23px;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        padding: 0 8px;
+        border-radius: $borderRadiusCard;
+        &--green{
+            background-color:rgb(3, 206, 164);;
+        }
+        &--blue{
+            background-color: rgb(90, 135, 252);;
+        }
+        &--orange{
+            background: rgb(248, 152, 40);
+        }
+    }
+    &__title{
+        a{
+            @extend %text;
+        }
+        
+    }
+    &__info{
+        display: flex;
+        font-size: 18px;
+        line-height: 150%;
+    }
+    &__summ{
+        color:$accent-color;
+        @extend %lato-700;
+        margin-right: 8px;
+    }
+    &__name{
+        padding-left: 8px;
+        position: relative;
+        color: rgb(120, 122, 128);
+        border-left: 1px solid rgb(120, 122, 128);
+    }
+    &__load{
+        font-size: 16px;
+        @extend %lato-700;
+        color:$main-color;
+        background-color: transparent;
+        text-align: center;
+        padding-left: 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 24px;
+            height: 24px;
+            left: 0;
+            background: url(../../img/icon/convert.svg);
+            background-repeat: no-repeat;
+        }
+    }
+}
