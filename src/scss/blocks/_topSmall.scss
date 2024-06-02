@@ -1,0 +1,29 @@
+@import "base/_vars.scss";
+.topSmall{
+    background: linear-gradient(45.00deg, rgba(255, 63, 58,0.2) 0%,rgba(247, 94, 5,0.2) 100%);
+    padding: 120px 0;
+    &__inner{
+        
+    }
+    &__content{
+        max-width: 1020px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+    }
+    &__text{
+        @extend %lato-700;
+        color:$accent-color;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    &__title{
+        font-size: 64px;
+        color:$title-color;
+        @extend %lato-900;
+        line-height: 130%;
+        text-transform: capitalize;
+    }   
+} 

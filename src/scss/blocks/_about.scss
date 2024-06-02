@@ -1,0 +1,54 @@
+@import "base/_vars.scss";
+.about{
+    padding: 120px 0 180px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+    }
+    &__content{
+        flex-basis: 600px;
+    }
+    &__content-title{
+        @extend %title;
+        margin-bottom: 40px;
+    }
+    &__content-text{
+        margin-bottom: 46px;
+    }
+    &__content-menu{
+        .about__content-subtitle{
+            font-size: 28px;
+        }
+    }
+    &__content-subtitle{
+        @extend %title;
+        margin-bottom: 24px;
+    }
+    &__content-link{
+        padding-left: 32px;
+        position: relative;
+        &:not(:last-of-type){
+            margin-bottom: 4px;
+        }
+        &:before{
+            position: absolute;
+            content:"";
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: url(../img/icon/check.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    &__sidebar{
+        padding: 40px 32px;
+        border: 1px solid rgb(229, 232, 237);
+        border-radius: $borderRadiusCard;
+        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),0px 12px 10px -6px rgba(154, 156, 165, 0.04),0px 30px 24px -10px rgba(154, 156, 165, 0.05),0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+        background: rgb(255, 255, 255); 
+        flex-basis: 495px;   
+    }
+}

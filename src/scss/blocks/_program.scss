@@ -1,0 +1,14 @@
+@import "base/_vars.scss";
+
+.program{
+    padding: 0 0 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+        align-items: center;
+    }
+    &__content{
+        flex-basis: 600px;
+    }
+}

@@ -1,0 +1,41 @@
+@import "base/_vars.scss";
+
+.forWrom{
+    padding: 0 0 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+    }
+    &__box{
+        flex-basis: 500px;
+    }
+    &__content{
+        flex-basis: 600px;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        
+    }
+    &__item{
+        @extend %text;
+        position: relative;
+        padding-left: 32px;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../img/icon/check.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    .forWrom__item{
+        color:$main-color;
+    }
+}

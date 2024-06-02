@@ -1,30 +1,26 @@
 const tabsLink = document.querySelectorAll('.benefits__link')
 const tabsItem = document.querySelectorAll('.benefits__item')
 
-tabsLink.forEach(function(item){
-    item.addEventListener('click',function(e){
-        const currentItemLink = item;
-        const tabId = currentItemLink.getAttribute('data-tab');
-        const currentItem = document.querySelector(tabId)
-        tabsLink.forEach(function(item){
-            item.classList.remove('active')
+if(tabsLink){
+    tabsLink.forEach(function(item){
+        item.addEventListener('click',function(e){
+            const currentItemLink = item;
+            const tabId = currentItemLink.getAttribute('data-tab');
+            const currentItem = document.querySelector(tabId)
+            tabsLink.forEach(function(item){
+                item.classList.remove('active')
+            })
+            tabsItem.forEach(function(item){
+                item.classList.remove('active')
+            })
+            item.classList.add('active')
+            currentItem.classList.add('active')
         })
-        tabsItem.forEach(function(item){
-            item.classList.remove('active')
-        })
-        item.classList.add('active')
-        currentItem.classList.add('active')
-    })
-})
-
-const load = document.querySelector('.team__load')
-const loadItem = document.querySelector('.team__items')
-
-if(load){
-    load.addEventListener('click',function(item){
-        loadItem.classList.toggle('active')
     })
 }
+
+
+
 
 
 const swiper = new Swiper('.teamCarousel__swiper', {

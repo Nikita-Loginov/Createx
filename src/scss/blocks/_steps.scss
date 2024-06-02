@@ -1,0 +1,93 @@
+@import "base/_vars.scss";
+.steps{
+    padding-bottom: 180px;
+    &__box{
+        text-align: center;
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:30px;
+        list-style: none;
+        counter-reset: custom-counter;
+    }
+    &__item{
+        counter-increment: custom-counter;
+        position: relative;
+        &:nth-of-type(-n+9){
+            &:before{
+                content:"0" counter(custom-counter);
+                display: block;
+                margin-bottom: 16px;
+                color: rgb(215, 218, 221);
+                @extend %lato-900;
+                font-size: 46px;
+                line-height: 130%;
+                letter-spacing: 0%;
+                transition: all .5s;
+                position: relative;
+            }
+        }
+        &:before{
+            content:counter(custom-counter);
+            display: block;
+            margin-bottom: 16px;
+            color: rgb(215, 218, 221);
+            @extend %lato-900;
+            font-size: 46px;
+            line-height: 130%;
+            letter-spacing: 0%;
+            transition: all .5s;
+            position: relative;
+        }
+        &:after{
+            position: absolute;
+            content:"";
+            width: 209px;
+            border:1px rgb(215, 218, 221) dashed;
+            right: 0;
+            top: 29px;
+        }
+        &:hover{
+            &:before{
+                color:$accent-color
+            }
+            .steps__decor{
+                opacity: 1;
+            }
+        }
+    }
+    &__title{
+        @extend %text;
+        margin-bottom: 8px;
+    }
+    &__decor{
+        width: 84px;
+        height: 84px;
+        background: rgba(255, 63, 58,0.12);
+        border-radius: 50%;
+        position: absolute;
+        left: -15px;
+        top: -12px;
+        opacity: 0;
+        transition: all .5s;
+        z-index: -1;
+        &:before{
+            position: absolute;
+            content:'';
+            width: 116px;
+            height: 116px;
+            border-radius: 50%;
+            background: rgba(255, 63, 58,0.06);
+            left: -18px;
+            top: -19px;
+            z-index: -1;
+        }
+    }
+}
+
+// @keyframes stepsLink{
+//     0{
+
+//     }
+// }

@@ -1,0 +1,116 @@
+@import "base/_vars.scss";
+.curator{
+    padding: 0 0 180px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+    }
+    &__content{
+        flex-basis: 600px;
+    }
+    &__heading{
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+        margin-bottom: 16px;
+        color:$title-color;
+        @extend %lato-700;
+    }
+    &__img{
+        flex-basis: 495px;
+        border-radius: $borderRadiusCard;
+        background-color: $teamCard-color; 
+        position: relative;
+        img{
+            // position: absolute;
+            // right: 19px;
+            // left: 19px;
+            // top: -20px;
+            transform: translateX(20px);
+        } 
+        &:before{
+            position: absolute;
+            content:"";
+            width: 242px;
+            height: 242px;
+            right: 20px;
+            top: -70px;
+            background-image: url(../img/curator/decor.svg);
+            opacity: 0.5;
+            background-size: contain;
+            z-index: -1;
+        }  
+    }
+    &__heading-text{
+        text-transform: uppercase;
+    }
+    &__heading-name{
+        text-transform: capitalize;
+        @extend %title;
+    }
+    &__text{
+        margin-bottom: 32px;
+    }
+    &__statistics{
+        margin-bottom: 32px;
+    }
+    &__statistics-list{
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+    }
+    &__statistics-item{
+        position: relative;
+        padding-left: 25px;
+        @extend %lato-700;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 15px;
+            height: 15px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+        }
+    }
+    &__statistics-rating{
+        &:before{
+            background-image: url(../../img/curator/star.svg);
+        }
+    }
+    &__statistics-courses{
+        &:before{
+            background-image: url(../../img/curator/play.svg);
+        }
+    }
+    &__statistics-students{
+        &:before{
+            background-image: url(../../img/curator/person.svg);
+        }
+    }
+    &__descr{
+        margin-bottom: 40px;
+    }
+    &__social{
+        display: flex;
+        gap:25px;
+    }
+    &__social-link{
+        svg{
+            path{
+                transition: all .5s;
+            }
+            
+        }
+        &:hover{
+            svg{
+                path{
+                    fill:$accent-color;
+                }
+                
+            }
+        }
+    }
+}

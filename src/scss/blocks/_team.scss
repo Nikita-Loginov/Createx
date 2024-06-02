@@ -75,6 +75,10 @@
         &:nth-of-type(-n+9) {
             display: block;
         }
+        &.hide{
+            // animation: filterItemHide 2s linear forwards;
+            display: none;
+        }
     }
     &__content{
         padding: 24px;
@@ -142,5 +146,13 @@
             background: url(../../img/icon/convert.svg);
             background-repeat: no-repeat;
         }
+    }
+}
+
+@keyframes filterItemHide{
+    to{
+        display: none;
+        min-height: 0;
+        min-height: 0;
     }
 }

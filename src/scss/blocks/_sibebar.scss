@@ -1,0 +1,35 @@
+@import "base/_vars.scss";
+
+.sidebar{
+    &__date,
+    &__duration,
+    &__price{
+        margin-bottom: 32px;
+        .sidebar__date-title,
+        .sidebar__duration-title,
+        .sidebar__price-title{
+            font-size: 14px;
+            text-transform: uppercase
+        }
+        &-title{
+            @extend %text;
+            margin-bottom: 8px;
+        }
+        .sidebar__date-info,
+        .sidebar__duration-info,
+        .sidebar__price-info{
+            font-size: 24px;
+            color:$accent-color;
+            line-height: 130%;
+        }
+        &-info{
+            @extend %text;
+        }
+    }
+    .sidebar__link{
+        min-height: 44px
+    }
+    &__link{
+        @extend %btn-accent;
+    }
+}

@@ -1,0 +1,78 @@
+@import "base/_vars.scss";
+.cta{
+    padding: 0 0 180px;
+    overflow: hidden;
+    &__inner{
+        padding: 48px 60px;
+        background: linear-gradient(45.00deg, rgba(255, 63, 58,0.2),rgba(247, 94, 5,0.2) 100%);
+        border-radius: $borderRadiusCard;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap:26px;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 235px;
+            height: 235px;
+            right: 300px;
+            top: -160px;
+            background-image: url(../../img/icon/circles.svg);
+            background-size: contain;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+        align-items: center;
+    }
+    &__title{
+        @extend %title;
+    }
+    &__countdown{
+        display: flex;
+        gap:24px;
+    }
+    &__countdown-link{
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+    }
+    &__countdown-num{
+        @extend %text;
+    }
+    &__countdown-time{
+        @extend %lato-400;
+        font-size: 12px;
+        line-height: 150%;
+        color:$text-color;
+    }
+    &__form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr auto;
+        gap:24px;
+    }
+    &__form-label{
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+    }
+    &__form-span{
+        font-size: 14px;
+    }
+    &__form-input{
+        @extend %input;
+    }
+    &__form-btn{
+        @extend %btn-accent;
+        align-self: flex-end;
+    }
+    .cta__title{
+        font-size: 32px;
+    }
+    .cta__form-input,
+    .cta__form-btn{
+        min-height: 44px;
+    }
+}
