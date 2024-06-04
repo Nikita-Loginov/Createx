@@ -1,0 +1,1 @@
+const toolbatBtn=document.querySelectorAll(".toolbat__view-buttom"),eventsCard=document.querySelector(".events-card");toolbatBtn.forEach((function(t){t.addEventListener("click",(function(e){currentBtn=t.dataset.view,eventsCard.dataset.temp=currentBtn,toolbatBtn.forEach((function(t){t.classList.remove("active")})),t.classList.add("active")}))}));

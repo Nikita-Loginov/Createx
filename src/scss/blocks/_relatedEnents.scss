@@ -1,0 +1,51 @@
+@import "base/_vars.scss";
+
+.relatedEnents{
+    padding: 100px 0 180px;
+    background: rgb(244, 245, 247);
+    &__box{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__content{
+        margin-bottom: 80px;
+    }
+    &__all{
+        display: flex;
+        justify-content: center;
+        gap:40px;
+        display: flex;
+        gap:40px;
+        align-items: center;
+        justify-content: center;
+        .events__all-text{
+            font-size: 28px;
+        }
+    }
+    &__all-text{
+        @extend %text;
+    }
+    &__all-link{
+        @extend %btn-accent;
+    }
+    .events-card__item{
+        flex-direction: column;
+    }
+    .events-card__info{
+        flex-basis: auto;
+    }
+    .events-card__date{
+        flex-direction: column;
+        gap:4px;
+    }
+    .events-card__date-time{
+        .events-card__date-month{
+            display: none;
+        }
+    }
+    .events-card__view{
+        width: 100%;
+    }
+    
+}

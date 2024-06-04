@@ -1,0 +1,39 @@
+.request{
+    padding: 120px 0;
+    &__inner{
+        display: flex;
+        align-items: center;
+        gap:20px;
+        justify-content: space-between;
+    }
+    &__form{
+        flex-basis: 510px;
+    }
+    &__form-label{
+        &:not(:last-of-type){
+            margin-bottom: 24px;
+        }
+        &:last-of-type{
+            margin-bottom: 40px;
+        }
+    }
+    &__box{
+        margin-bottom: 40px;
+    }
+    &__form-label{
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+    }
+    &__form-span{
+        font-size: 14px;
+    }
+    &__form-input{
+        @extend %input;
+    }
+    &__form-btn{
+        @extend %btn-accent;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+@import "base/_vars.scss";
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    align-items: center;
+    &__link{
+        @extend %lato-700;
+        line-height: 160%;
+        font-size: 20px;
+        color:$main-color;
+        &.active{
+            color:$accent-color;
+        }
+    }
+    &__next{
+        background-color: transparent;
+    }
+}

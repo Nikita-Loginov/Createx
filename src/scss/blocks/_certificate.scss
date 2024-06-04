@@ -21,11 +21,6 @@
         @extend %title;
         margin-bottom: 48px;
     }
-    &__patners{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap:20px;
-    }
     &__img{
         border: 1px solid rgb(229, 232, 237);
         border-radius: $borderRadiusCard;

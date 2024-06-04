@@ -1,0 +1,77 @@
+@import "base/_vars.scss";
+
+.newsletter{
+    &__inner{
+        padding: 60px 105px;
+        background: linear-gradient(45.00deg, rgb(255, 63, 58,0.2) 0%,rgb(247, 94, 5,0.2) 100%);
+        border-radius: $borderRadiusCard;
+        display: flex;
+        gap:20px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &:before{
+            position: absolute;
+            content:"";
+            left: 5px;
+            bottom: 47px;
+            width: 116px;
+            height: 159px;
+            background: url(../img/icon/dots.svg);
+            z-index: 0;
+        }
+        .newsletter__title{
+            font-size: 32px;
+        }
+    }
+    &__img{
+        position: relative;
+        z-index: 1;
+    }
+    &__title{
+        @extend %title;
+        margin-bottom: 50px;
+    }
+    &__content{
+        flex-basis: 600px;
+    }
+    &__form-email{
+        display: flex;
+        gap:24px;
+        margin-bottom: 24px;
+    }
+    &__form-input{
+        @extend %input;
+        flex:1;
+    }
+    &__form-btn{
+        @extend %btn-accent;
+    }
+    &__form-check{
+        display: flex;
+        align-items: center;
+    }
+    &__form-hidecheckbox{
+        width: 0;
+        height: 0;
+        &:checked +.newsletter__form-checkbox{
+            background-image: url(../img/icon/checkArrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &__form-checkbox{
+        width: 16px;
+        height: 16px;
+        background-color: $accent-color;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    &__form-text{
+        font-size: 16px;
+        line-height: 1.6;
+        color:$main-color;
+        @extend %lato-400;
+        margin-left: 12px;
+    }
+}

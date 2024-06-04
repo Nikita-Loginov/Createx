@@ -1,6 +1,7 @@
 @import "base/_vars.scss";
 
 .sidebar{
+    flex-basis: 500px;
     &__date,
     &__duration,
     &__price{

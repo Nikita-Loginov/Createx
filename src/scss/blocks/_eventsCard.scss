@@ -1,0 +1,108 @@
+@import "base/_vars.scss";
+
+.events-card{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    &__item{
+        background: rgb(255, 255, 255);
+        border-radius: $borderRadiusCard;
+        transition: all .5s;
+        padding: 32px 40px;
+        display: none;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap:15px;
+        &:hover{
+            box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),0px 12px 10px -6px rgba(255, 63, 58, 0.08),0px 30px 24px -10px rgba(255, 63, 58, 0.1),0px 80px 80px -20px rgba(255, 63, 58, 0.16);
+        }
+        &:nth-of-type(-n+3){
+            display: flex;
+        }
+    }
+    &.events-card--more{
+        .events-card__item{
+            &:nth-of-type(-n+20){
+                display: flex;
+            }
+            border: 1px solid rgb(229, 232, 237)
+        }
+        
+    }
+    &__date{
+        display: flex;
+        align-items: center;
+        gap:20px;
+        
+    }
+    &__date-numbox{
+        @extend %title;
+        .events-card__date-num,
+        .events-card__date-month{
+            color:$accent-color;
+        }
+        .events-card__date-month{
+            display: none;
+        }
+    }
+    &__info{
+        flex-basis: 760px;
+    }
+    &__date-time{
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+    }
+    &__date-month{
+        @extend %text;
+    }
+    &__date-period,
+    &__info-text{
+        color: rgb(120, 122, 128);
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+    }
+    &__info-title{
+        a{
+            @extend %text;
+        }
+        
+    }
+    &__view{
+        @extend %btn-nocolor;
+    }
+}
+
+.events-card[data-temp="grid"]{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    .events-card__item{
+        flex-direction: column;
+    }
+    .events-card__info{
+        flex-basis: auto;
+    }
+    .events-card__date{
+        flex-direction: column;
+        gap:4px;
+    }
+    .events-card__date-numbox{
+        align-self: flex-start;
+    }
+    .events-card__date-numbox{
+        .events-card__date-month{
+            display: block;
+        }
+    }
+    .events-card__date-time{
+        .events-card__date-month{
+            display: none;
+        }
+    }
+    .events-card__view{
+        width: 100%;
+    }
+}

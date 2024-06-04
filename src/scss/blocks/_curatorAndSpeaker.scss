@@ -1,5 +1,6 @@
 @import "base/_vars.scss";
-.curator{
+.curator,
+.speaker{
     padding: 0 0 180px;
     &__inner{
         display: flex;
@@ -112,5 +113,13 @@
                 
             }
         }
+    }
+}
+
+.speaker{
+    .patners{
+        display: flex;
+        gap:40px;
+        margin-bottom: 40px;
     }
 }
