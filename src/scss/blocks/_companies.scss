@@ -1,0 +1,16 @@
+.companies{
+    padding: 100px 0;
+    background: rgb(244, 245, 247);
+    &__box{
+        text-align: center;
+    }
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:10px;
+    }
+    &__item{
+        flex-basis: calc(100% / 6);
+    }
+}

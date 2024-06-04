@@ -1,0 +1,70 @@
+@import "base/_vars.scss";
+
+.team-card{
+    &:hover{
+        .team-card__img{
+            &:after{
+                opacity: 1;
+            }
+        }
+        .team-card__img-hover{
+            opacity: 1;
+        }
+    }
+    &__imagebox{
+        margin-bottom: 16px;
+        position: relative;
+    }
+    &__img{
+        width: 285px;
+        background-color: #FFCF2D;
+        padding: 20px 20px 0 20px;
+        border-radius: $borderRadiusCard;
+        position: relative;
+        cursor: pointer;
+        &:after{
+            position: absolute;
+            content:"";
+            inset:0;
+            background: linear-gradient(180.00deg, rgba(30, 33, 44, 0) 43.897%,rgba(30, 33, 44, 0.03) 55.206%,rgba(30, 33, 44, 0.33) 68.728%,rgba(30, 33, 44, 0.56) 76.168%,rgba(30, 33, 44, 0.77) 83.749%,rgba(30, 33, 44, 0.92) 91.493%,rgb(30, 33, 44) 100%);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+    }
+    &__img-hover{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        opacity: 0;
+        gap:12px;
+        transition: all .5s;
+    }
+    &__img-social{
+        svg{
+            g{
+                transition: all .3s;
+            }
+        }
+    }
+    &__img-social{
+        &:hover{
+            svg{
+                g{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__name{
+        a{
+            @extend %text;
+            margin-bottom: 4px;
+        }
+        
+    }
+    &__name,
+    &__post{
+        text-align: center;
+    }
+}

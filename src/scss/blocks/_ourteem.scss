@@ -1,0 +1,11 @@
+.ourteem{
+    padding: 0 0 120px;
+    &__box{
+        text-align: center;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:60px 30px;
+    }
+}

@@ -1,0 +1,34 @@
+@import "base/_vars.scss";
+
+.intro{
+    padding: 80px 0 180px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+        align-items: flex-end;
+    }
+    &__content{
+        flex-basis: 600px;
+    }
+    &__intro{
+        margin-bottom: 48px;
+    }
+    &__title{
+        @extend %text;
+        margin-bottom: 24px;
+    }
+    &__text{
+        margin-bottom: 60px;
+    }
+    &__btnbox{
+        display: flex;
+        gap:24px;
+    }
+    &__link--nocolor{
+        @extend %btn-nocolor;
+    }
+    &__link--yescolor{
+        @extend %btn-accent;
+    }
+}
